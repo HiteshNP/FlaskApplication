@@ -21,9 +21,7 @@
       margin: 0 auto;
     }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       color: #333;
     }
 
@@ -59,8 +57,7 @@
       color: #333;
     }
 
-    ol,
-    ul {
+    ol, ul {
       margin-bottom: 15px;
     }
 
@@ -73,8 +70,7 @@
       font-size: 16px;
     }
 
-    th,
-    td {
+    th, td {
       padding: 10px;
       border-bottom: 1px solid #ddd;
       text-align: left;
@@ -84,7 +80,7 @@
       background-color: #f8f8f8;
     }
 
-    .toc {
+    .navbar {
       position: fixed;
       top: 0;
       left: 0;
@@ -94,6 +90,7 @@
       border-right: 1px solid #ddd;
       height: 100vh;
       overflow-y: auto;
+      z-index: 1000;
     }
 
     .toc a {
@@ -106,14 +103,19 @@
     .toc a:hover {
       color: #007bff;
     }
+
+    .content {
+      margin-top: 50px;
+      margin-left: 35%;
+    }
   </style>
 </head>
 
 <body class="markdown-body">
 
-  <div class="toc">
-    <strong>Table of Contents</strong>
-    <ul>
+  <div class="navbar">
+    <strong>Table of Contents:</strong>
+    <ul class="toc">
       <li><a href="#1-introduction">1. Introduction</a></li>
       <li><a href="#2-dependencies">2. Dependencies</a></li>
       <li><a href="#3-getting-started">3. Getting Started</a></li>
@@ -133,9 +135,9 @@
     </ul>
   </div>
 
-  <div class="container">
+  <div class="container content">
 
-    <h1 id="1-introduction">Image Generator Web App Documentation</h1>
+    <h2 id="1-introduction">1. Image Generator Web App Documentation</h2>
 
     <p>
       The Image Generator web app is designed to facilitate the generation of images with the same pattern but different
@@ -152,16 +154,12 @@
       The following external libraries and frameworks are utilized in the project:
     </p>
 
-    <pre>
-<code>
-- Flask 3.0.1
+    <pre><code>- Flask 3.0.1
 - Werkzeug 3.0.1
 - OpenCV (cv2) 4.9.0.8
 - NumPy 1.26.3
 - scikit-image 0.22.0
-- Bootstrap 4.3.1
-</code>
-        </pre>
+- Bootstrap 4.3.1</code></pre>
 
     <h2 id="3-getting-started">3. Getting Started</h2>
 
@@ -215,7 +213,9 @@
       colors. The supported image formats include JPG, JPEG, and PNG.
     </p>
 
-    <h3 id="image-generation">Image Generation</h3>
+   
+
+ <h3 id="image-generation">Image Generation</h3>
 
     <p>
       Upon successful upload, users can click the "Generate" button to create new images with the same pattern but
